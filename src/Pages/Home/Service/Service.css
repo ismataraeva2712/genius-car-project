@@ -1,0 +1,9 @@
+.my-card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+}
+
+.my-card img {
+    border-radius: 10px 10px 0 0;
+}
