@@ -1,11 +1,16 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const ServiceDetails = () => {
     const { serviceId } = useParams()
+    const navigate = useNavigate()
+    const handleCheckout = () => {
+        navigate('/checkout')
+    }
     return (
-        <div>
-            <h1>this is service page {serviceId} </h1>
+        <div className='text-center'>
+            <h1>this is service details page {serviceId} </h1>
+            <button className='bg-primary text-white border-0 p-3' onClick={handleCheckout} >Proceed Checkout</button>
         </div>
     );
 };
