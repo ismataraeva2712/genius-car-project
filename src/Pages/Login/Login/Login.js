@@ -7,8 +7,11 @@ import Social from '../Social/Social';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
+import { Helmet } from 'react-helmet-async';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Login = () => {
+
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
@@ -59,6 +62,7 @@ const Login = () => {
     }
     return (
         <div className='container mt-5'>
+            <PageTitle title='Login'></PageTitle>
             <h2 className='text-center text-primary '>Login</h2>
             <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
